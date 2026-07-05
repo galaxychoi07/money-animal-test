@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>나의 경제 동물 테스트 | 나는 어떤 소비 스타일일까?</title>
+  <meta name="description" content="3분 만에 알아보는 나의 경제 동물 테스트. 저축형, 소비형, 투자형, 즉흥형 중 내 통장의 진짜 주인을 찾아보세요." />
+  <meta name="keywords" content="경제 동물 테스트, 소비습관 테스트, 재테크 테스트, 돈 성향 테스트, 심리테스트" />
+  <meta property="og:title" content="나의 경제 동물 테스트" />
+  <meta property="og:description" content="내 통장의 진짜 주인은 누구일까? 12문항으로 알아보는 귀여운 돈 성향 테스트" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="./og-default.png" />
+  <meta name="theme-color" content="#ffb86b" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="app" class="app-shell"></main>
+
+  <template id="home-template">
+    <section class="screen home-screen">
+      <div class="badge">Project INVINCIBLE</div>
+      <div class="hero-card pop">
+        <div class="animal-cloud" aria-hidden="true">
+          <span data-animal="ant"></span><span data-animal="squirrel"></span><span data-animal="owl"></span><span data-animal="fox"></span>
+          <span data-animal="turtle"></span><span data-animal="beaver"></span><span data-animal="tiger"></span><span data-animal="monkey"></span>
+        </div>
+        <h1>나의 경제 동물 테스트</h1>
+        <p class="lead">당신의 통장에는 어떤 동물이 살고 있을까요?</p>
+        <p class="sublead">12문항 · 3분 컷 · 무료 테스트</p>
+        <button class="primary-btn" id="startBtn">테스트 시작하기</button>
+      </div>
+      <section class="info-card">
+        <h2>이 테스트는 무엇을 보나요?</h2>
+        <p>돈을 대하는 태도를 <b>모으기/쓰기</b>, <b>안정/모험</b>, <b>계획/즉흥</b> 3가지 축으로 분석해 8가지 경제 동물로 보여줍니다.</p>
+      </section>
+      <section class="notice-card">
+        <strong>안내</strong>
+        <p>재미용 성향 테스트이며 금융·투자 자문이 아닙니다.</p>
+      </section>
+    </section>
+  </template>
+
+  <template id="test-template">
+    <section class="screen test-screen">
+      <div class="top-row">
+        <button class="ghost-btn" id="backBtn">← 이전</button>
+        <span id="stepText"></span>
+      </div>
+      <div class="progress"><div id="progressBar"></div></div>
+      <article class="question-card pop">
+        <p class="question-axis" id="axisText"></p>
+        <h2 id="questionText"></h2>
+        <div id="options" class="options"></div>
+      </article>
+    </section>
+  </template>
+
+  <template id="loading-template">
+    <section class="screen loading-screen">
+      <div class="loader-animal">🔍</div>
+      <h2>지출 패턴 분석 중…</h2>
+      <p>당신의 통장 속 경제 동물을 찾고 있습니다.</p>
+      <div class="ad-slot">광고 영역 · AdSlot Loading Bottom</div>
+    </section>
+  </template>
+
+  <template id="result-template">
+    <section class="screen result-screen">
+      <article id="resultCard" class="result-card pop">
+        <div class="result-watermark">money animal test</div>
+        <div id="resultEmoji" class="result-emoji"></div>
+        <p class="result-label">당신의 경제 동물은</p>
+        <h1 id="resultTitle"></h1>
+        <p id="resultSummary" class="result-summary"></p>
+        <p id="resultDescription" class="result-description"></p>
+        <div class="stat-grid" id="statGrid"></div>
+      </article>
+
+      <section class="match-card">
+        <div>
+          <span>찰떡 궁합</span>
+          <strong id="matchText"></strong>
+        </div>
+        <div>
+          <span>환장 궁합</span>
+          <strong id="mismatchText"></strong>
+        </div>
+      </section>
+
+      <section class="prescription-card">
+        <h2>이번 달 처방전</h2>
+        <p id="prescriptionText"></p>
+      </section>
+
+      <div class="ad-slot">광고 영역 · Result Middle AdSlot</div>
+
+      <section class="share-card">
+        <button class="primary-btn" id="copyBtn">결과 링크 복사</button>
+        <button class="secondary-btn" id="saveBtn">결과 이미지 저장</button>
+        <button class="secondary-btn" id="retryBtn">다시하기</button>
+      </section>
+
+      <section class="notice-card small">
+        <strong>주의</strong>
+        <p>본 테스트는 재미를 위한 성향 콘텐츠입니다. 특정 금융상품 추천이나 투자 자문이 아닙니다.</p>
+      </section>
+    </section>
+  </template>
+
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

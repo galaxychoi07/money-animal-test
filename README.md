@@ -1,2 +1,28 @@
-# money-animal-test
-my money animal test
+# 나의 경제 동물 테스트
+
+Project INVINCIBLE 바이럴앱마스터 TOP1 MVP입니다.
+
+## 구성
+- `index.html` : 앱 본문 및 SEO/OG 기본 메타태그
+- `style.css` : 모바일 우선 UI
+- `app.js` : 질문, 결과, 점수 계산, 공유/이미지 저장 기능
+
+## 사용법
+1. 폴더 전체를 웹호스팅에 업로드합니다.
+2. 또는 GitHub Pages / Netlify / Vercel에 정적 사이트로 배포합니다.
+3. `index.html`을 열면 바로 실행됩니다.
+
+## 주요 기능
+- 12문항 경제 성향 테스트
+- 8가지 경제 동물 결과
+- 결과 링크 복사
+- 결과 카드 이미지 저장(html2canvas)
+- 광고 슬롯 placeholder
+- 금융/투자 자문 아님 고지 포함
+
+## 다음 개선
+- 유형별 OG 이미지 8장 제작
+- 카카오톡 공유 SDK 연결
+- 네이버/구글 서치콘솔 등록
+- 애드핏/애드센스 코드 삽입
+- 허브 사이트 연결
